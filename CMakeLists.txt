@@ -13,6 +13,7 @@
 cmake_minimum_required(VERSION 2.8 FATAL_ERROR)
 
 project(SOCI)
+set(CMAKE_CXX_STANDARD 17)
 
 ###############################################################################
 # Build features and variants
@@ -24,6 +25,8 @@ option(SOCI_TESTS "Enable build of collection of SOCI tests" ON)
 option(SOCI_ASAN "Enable address sanitizer on GCC v4.8+/Clang v 3.1+" OFF)
 option(SOCI_LTO "Enable link time optimization" OFF)
 option(SOCI_VISIBILITY "Enable hiding private symbol using ELF visibility if supported by the platform" ON)
+
+# set(ORACLE_HOME "/home/gf4567/Desktop/soci/test_oracle/xe/")
 
 if (SOCI_LTO)
     cmake_minimum_required(VERSION 3.9)
